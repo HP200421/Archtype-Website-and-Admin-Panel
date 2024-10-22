@@ -1,0 +1,27 @@
+# RewriteEngine On
+# RewriteBase /archtype/
+
+# Pass category to portfolio.php located in the view folder
+# RewriteRule ^portfolio/(architectural-project|landscape|interior|awards)/?$ view/portfolio.php?category=$1 [L]
+
+# Rewrite other URLs to their respective PHP files in the view folder
+# RewriteRule ^about$ view/about.php [L]
+# RewriteRule ^contact$ view/contact.php [L]
+# Above is the old .htaccess file
+
+RewriteEngine On
+RewriteBase /archtype/
+
+# Pass category and subcategory to portfolio.php located in the view folder
+RewriteRule ^portfolio/(architectural-project|landscape|interior|awards)/([^/]+)/?$ view/portfolio.php?category=$1&subcategory=$2 [L]
+# Pass category to portfolio.php located in the view folder (for category only)
+RewriteRule ^portfolio/(architectural-project|landscape|interior|awards)/?$ view/portfolio.php?category=$1 [L]
+# Pass category, subcategory, and post to post-details.php located in the view folder
+RewriteRule ^portfolio/(architectural-project|landscape|interior|awards)/([^/]+)/([^/]+)/?$ view/post-details.php?category=$1&subcategory=$2&post=$3 [L]
+
+# Rewrite other URLs to their respective PHP files in the view folder
+RewriteRule ^about$ view/about.php [L]
+RewriteRule ^contact$ view/contact.php [L]
+
+# Remember to remove it after
+# RewriteRule ^portfolio/(architectural-project|landscape|interior|awards)/([^/]+)/([^/]+)/?$ view/portfolio.php?category=$1&subcategory=$2&post=$3 [L]
