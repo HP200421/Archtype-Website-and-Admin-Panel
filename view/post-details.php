@@ -14,6 +14,7 @@ function getPostBySlug($conn, $slug) {
 
 // Get the post slug from the URL
 $postSlug = $_GET['post'] ?? '';
+$categorySlug = $_GET['category'] ?? '';
 $images = [];
 
 // If a post slug is provided, fetch the post details
@@ -36,10 +37,10 @@ $conn->close();
             <?php include 'includes/breadcrumb.php'; ?>
         </div>
 
-        <div class="col-6 col-lg-3">
+        <div class="col-12 col-6 col-lg-3">
             <ul id="category-list" class="ps-1 category-list categoryListVisible list-unstyled">
                 <li><a href="/archtype/portfolio/<?php echo htmlspecialchars($categorySlug); ?>" class="text-decoration-none text-dark">View All Projects</a></li>
-                <li><a href="/archtype/portfolio/<?php echo htmlspecialchars($categorySlug); ?>" class="text-decoration-none text-dark">Project Highlights</a></li>
+                <li><a href="#post-details" class="text-decoration-none text-dark">Project Details</a></li>
             </ul>
         </div>
  
@@ -60,8 +61,8 @@ $conn->close();
                     <p>No images available.</p>
                 <?php endif; ?>
             </div>
-            <div class="post-description">
-                <p><?php echo $post['details']; ?></p>
+            <div id="post-details" class="post-details">
+              <?php echo $post['details']; ?>
             </div>
         </div>
     </div>

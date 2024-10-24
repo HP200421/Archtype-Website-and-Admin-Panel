@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ARCHTYPE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= LINK; ?>assets/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="<?= LINK; ?>assets/vendor/bootstrap-icons/bootstrap-icons.css" />
     <link rel="stylesheet" href="<?= LINK; ?>assets/vendor/owlcarousel/assets/owl.carousel.css" />
@@ -44,7 +45,7 @@
               <h3>ARCHTYPE</h3>
               <p>ARCHTYPE <span class="divider"></span> CITY NAME</p>
             </div>
-            <img src="assets/images/3.jpg" class="img" alt="Image 3" />
+            <img src="assets/images/3.jpg" class="img" alt="Image 3"/>
           </div>
           <div class="item">
             <div
@@ -73,7 +74,7 @@
     <div class="fixed-arch-div d-flex flex-column flex-lg-row justify-content-around align-items-end position-fixed w-100 z-index-5">
       <nav class="order-2 order-lg-1 animate-in">
         <ul class="list-unstyled d-flex fs-6 gap-4 mb-0 text-uppercase">
-          <li><a href="/archtype/portfolio/architecture" class="text-decoration-none text-white">Architecture</a></li>
+          <li><a href="/archtype/portfolio/architectural-project" class="text-decoration-none text-white">Architecture</a></li>
           <li><a href="/archtype/portfolio/landscape" class="text-decoration-none text-white">Landscape</a></li>
           <li><a href="/archtype/portfolio/awards" class="text-decoration-none text-white">Awards</a></li>
         </ul>
@@ -87,11 +88,10 @@
     <div class="fixed-bottom-nav d-flex flex-column flex-lg-row justify-content-around position-fixed">
       <nav>
         <ul class="nav-list">
-          <li><a href="/archtype" class="active">Home</a></li>
-          <li><a href="/archtype/about">About</a></li>
           <li><a href="/archtype/portfolio/architectural-project">Architecture</a></li> 
           <li><a href="/archtype/portfolio/landscape">Landscape</a></li> 
           <li><a href="/archtype/portfolio/awards">Awards</a></li>
+          <li><a href="/archtype/about">About</a></li>
           <li><a href="/archtype/contact">Contact</a></li>
         </ul>
       </nav>

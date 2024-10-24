@@ -1,7 +1,7 @@
 <?php
     // To view in mobile devices connected with same wifi
-    define("LINK", "http://192.168.0.107/archtype/"); 
-    // define("LINK", "http://localhost/archtype/");
+    // define("LINK", "http://192.168.0.107/archtype/"); 
+    define("LINK", "http://localhost/archtype/");
 
 
     define("HOST_NAME", "localhost");
@@ -14,8 +14,8 @@
 
 
     function convertSlugToString($slug) {
-        $string = str_replace('-', ' ', $slug);  // Replace dashes with spaces
-        $string = ucwords($string);              // Capitalize each word
+        $string = str_replace('-', ' ', $slug);  
+        $string = ucwords($string);              
         return $string;
     }
     

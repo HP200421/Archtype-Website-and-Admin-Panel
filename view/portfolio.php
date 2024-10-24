@@ -63,15 +63,15 @@ $conn->close();
 <div id="gradient"></div>
 <div class="container">
     <div class="row sample">
-        <div class="col-6 col-lg-3 custom-burger">
+        <div class="col-12 col-sm-6 col-lg-3 custom-burger p-0">
             <?php include 'includes/burger.php'; ?>
         </div>
-        <div class="col-12 col-sm-6 col-lg-9">
+        <div class="col-12 col-sm-6 col-lg-9 p-0">
             <?php include 'includes/breadcrumb.php'; ?>
         </div>
 
         <!-- Categories Section -->
-        <div class="col-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-3 p-0">
             <ul id="category-list" class="ps-1 category-list categoryListVisible list-unstyled">
                 <li><a href="/archtype/portfolio/<?php echo htmlspecialchars($categorySlug); ?>" class="text-decoration-none text-dark">All</a></li>
                 <?php foreach ($categories[$categorySlug] ?? [] as $subCategory): ?>
@@ -91,7 +91,7 @@ $conn->close();
                 <?php if (!empty($posts)): ?>
                     <div class="row">
                         <?php foreach ($posts as $post): ?>
-                            <div class="col-6 col-md-4 col-lg-3 mb-4"> 
+                            <div class="col-6 col-md-4 col-lg-3 mb-5"> 
                                 <div class="post">
                                     <?php
                                         $image = json_decode($post['thumbnail_image'], true);

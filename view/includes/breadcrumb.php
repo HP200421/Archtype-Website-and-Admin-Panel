@@ -1,4 +1,5 @@
 <?php
+// Keeping the comments for reference and better understanding the code
 // Get the current URL path
 $currentPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $segments = array_filter(explode('/', trim($currentPath, '/'))); // Filter out any empty segments
@@ -18,7 +19,7 @@ foreach ($segments as $index => $segment) {
     
     // Add the segment as a breadcrumb item
     if ($index === count($segments) - 1) {
-        // Last item is the active page, make it bold
+        // Last item is the active page and making it bold
         $breadcrumbItems[] = [
             'name' => ucfirst($segment),
             'link' => '',
@@ -37,7 +38,7 @@ foreach ($segments as $index => $segment) {
 <nav aria-label="breadcrumb" class="bread">
   <ol class="breadcrumb">
     <?php foreach ($breadcrumbItems as $index => $item): ?>
-      <li class="breadcrumb-item fs-5 <?php echo $index === count($breadcrumbItems) - 1 ? ' active' : ''; ?>" aria-current="<?php echo $index === count($breadcrumbItems) - 1 ? 'page' : ''; ?>">
+      <li class="breadcrumb-item <?php echo $index === count($breadcrumbItems) - 1 ? ' active' : ''; ?>" aria-current="<?php echo $index === count($breadcrumbItems) - 1 ? 'page' : ''; ?>">
         <?php if ($index !== count($breadcrumbItems) - 1): ?>
           <?php echo convertSlugToString(htmlspecialchars($item['name'])); ?>
         <?php else: ?>
