@@ -19,9 +19,13 @@ RewriteRule ^portfolio/(architectural-project|landscape|interior|awards)/?$ view
 # Pass category, subcategory, and post to post-details.php located in the view folder
 RewriteRule ^portfolio/(architectural-project|landscape|interior|awards)/([^/]+)/([^/]+)/?$ view/post-details.php?category=$1&subcategory=$2&post=$3 [L]
 
-# Rewrite other URLs to their respective PHP files in the view folder
-RewriteRule ^about$ view/about.php [L]
-RewriteRule ^contact$ view/contact.php [L]
+# Rewrite rules for About and Contact pages
+RewriteRule ^about$ view/pages/about.php [L]
+RewriteRule ^contact$ view/pages/contact.php [L]
+
+RewriteRule ^about/awards$ view/pages/about.php?page=awards [L]
+RewriteRule ^about/services$ view/pages/about.php?page=services [L]
+RewriteRule ^about/news$ view/pages/about.php?page=news [L]
 
 # Remember to remove it after
 # RewriteRule ^portfolio/(architectural-project|landscape|interior|awards)/([^/]+)/([^/]+)/?$ view/portfolio.php?category=$1&subcategory=$2&post=$3 [L]

@@ -39,7 +39,7 @@ $conn->close();
 
         <div class="col-12 col-6 col-lg-3">
             <ul id="category-list" class="ps-1 category-list categoryListVisible list-unstyled">
-                <li><a href="/archtype/portfolio/<?php echo htmlspecialchars($categorySlug); ?>" class="text-decoration-none text-dark">View All Projects</a></li>
+                <li><a href="<?= LINK; ?>portfolio/<?php echo htmlspecialchars($categorySlug); ?>" class="text-decoration-none text-dark">View All Projects</a></li>
                 <li><a href="#post-details" class="text-decoration-none text-dark">Project Details</a></li>
             </ul>
         </div>

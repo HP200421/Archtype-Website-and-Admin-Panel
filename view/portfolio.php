@@ -73,10 +73,10 @@ $conn->close();
         <!-- Categories Section -->
         <div class="col-12 col-sm-6 col-lg-3 p-0">
             <ul id="category-list" class="ps-1 category-list categoryListVisible list-unstyled">
-                <li><a href="/archtype/portfolio/<?php echo htmlspecialchars($categorySlug); ?>" class="text-decoration-none text-dark">All</a></li>
+                <li><a href="<?= LINK; ?>portfolio/<?php echo htmlspecialchars($categorySlug); ?>" class="text-decoration-none text-dark">All</a></li>
                 <?php foreach ($categories[$categorySlug] ?? [] as $subCategory): ?>
                     <li>
-                        <a href="/archtype/portfolio/<?php echo htmlspecialchars($categorySlug); ?>/<?php echo htmlspecialchars($subCategory['slug']); ?>" 
+                        <a href="<?= LINK; ?>portfolio/<?php echo htmlspecialchars($categorySlug); ?>/<?php echo htmlspecialchars($subCategory['slug']); ?>" 
                             class="text-decoration-none text-dark">
                             <?php echo htmlspecialchars($subCategory['subcategory_name']); ?>
                         </a>
@@ -98,7 +98,7 @@ $conn->close();
                                         if (is_array($image) && !empty($image)):
                                             $firstImage = $image[0];
                                     ?>
-                                        <a href="/archtype/portfolio/<?php echo htmlspecialchars($categorySlug); ?>/<?php echo htmlspecialchars($subCategory['slug']); ?>/<?php echo htmlspecialchars($post['slug']); ?>" class="post-link"> 
+                                        <a href="<?= LINK; ?>portfolio/<?php echo htmlspecialchars($categorySlug); ?>/<?php echo htmlspecialchars($subCategory['slug']); ?>/<?php echo htmlspecialchars($post['slug']); ?>" class="post-link"> 
                                             <img loading="lazy" src="<?php echo htmlspecialchars(LINK . 'uploads/' . $firstImage); ?>"  class="thumbnail-image" />
                                         </a>
                                         <div class="post-title"><?php echo htmlspecialchars($post['post_name']); ?></div>
@@ -111,7 +111,7 @@ $conn->close();
                         <?php endforeach; ?>
                     </div>
                 <?php else: ?>
-                    <h2>No posts found.</h2>
+                    <h5>No posts found.</h5>
                 <?php endif; ?>
             </div>
         </div>

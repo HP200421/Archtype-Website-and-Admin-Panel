@@ -25,7 +25,7 @@
               <h3>ARCHTYPE</h3>
               <p>ARCHTYPE <span class="divider"></span> CITY NAME</p>
             </div>
-            <img src="assets/images/1.jpg" class="img" alt="Image 1" />
+            <img src="<?= LINK; ?>assets/images/1.jpg" class="img" alt="Image 1" />
           </div>
           <div class="item">
             <div
@@ -35,7 +35,7 @@
               <h3>ARCHTYPE</h3>
               <p>ARCHTYPE <span class="divider"></span> CITY NAME</p>
             </div>
-            <img src="assets/images/2.jpg" class="img" alt="Image 2" />
+            <img src="<?= LINK; ?>assets/images/2.jpg" class="img" alt="Image 2" />
           </div>
           <div class="item">
             <div
@@ -45,7 +45,7 @@
               <h3>ARCHTYPE</h3>
               <p>ARCHTYPE <span class="divider"></span> CITY NAME</p>
             </div>
-            <img src="assets/images/3.jpg" class="img" alt="Image 3"/>
+            <img src="<?= LINK; ?>assets/images/3.jpg" class="img" alt="Image 3"/>
           </div>
           <div class="item">
             <div
@@ -55,7 +55,7 @@
               <h3>ARCHTYPE</h3>
               <p>ARCHTYPE <span class="divider"></span> CITY NAME</p>
             </div>
-            <img src="assets/images/4.jpg" class="img" alt="Image 4" />
+            <img src="<?= LINK; ?>assets/images/4.jpg" class="img" alt="Image 4" />
           </div>
           <div class="item">
             <div
@@ -65,7 +65,7 @@
               <h3>ARCHTYPE</h3>
               <p>ARCHTYPE <span class="divider"></span> CITY NAME</p>
             </div>
-            <img src="assets/images/5.jpg" class="img" alt="Image 5" />
+            <img src="<?= LINK; ?>assets/images/5.jpg" class="img" alt="Image 5" />
           </div>
         </div>
       </section>
@@ -74,9 +74,9 @@
     <div class="fixed-arch-div d-flex flex-column flex-lg-row justify-content-around align-items-end position-fixed w-100 z-index-5">
       <nav class="order-2 order-lg-1 animate-in">
         <ul class="list-unstyled d-flex fs-6 gap-4 mb-0 text-uppercase">
-          <li><a href="/archtype/portfolio/architectural-project" class="text-decoration-none text-white">Architecture</a></li>
-          <li><a href="/archtype/portfolio/landscape" class="text-decoration-none text-white">Landscape</a></li>
-          <li><a href="/archtype/portfolio/awards" class="text-decoration-none text-white">Awards</a></li>
+          <li><a href="<?= LINK; ?>portfolio/architectural-project" class="text-decoration-none text-white">Architecture</a></li>
+          <li><a href="<?= LINK; ?>portfolio/landscape" class="text-decoration-none text-white">Landscape</a></li>
+          <li><a href="<?= LINK; ?>about/awards" class="text-decoration-none text-white">Awards</a></li>
         </ul>
       </nav>
       <div class="order-1 order-lg-2">
@@ -88,11 +88,11 @@
     <div class="fixed-bottom-nav d-flex flex-column flex-lg-row justify-content-around position-fixed">
       <nav>
         <ul class="nav-list">
-          <li><a href="/archtype/portfolio/architectural-project">Architecture</a></li> 
-          <li><a href="/archtype/portfolio/landscape">Landscape</a></li> 
-          <li><a href="/archtype/portfolio/awards">Awards</a></li>
-          <li><a href="/archtype/about">About</a></li>
-          <li><a href="/archtype/contact">Contact</a></li>
+          <li><a href="<?= LINK; ?>portfolio/architectural-project">Architecture</a></li> 
+          <li><a href="<?= LINK; ?>portfolio/landscape">Landscape</a></li> 
+          <li><a href="<?= LINK; ?>about/awards">Awards</a></li>
+          <li><a href="<?= LINK; ?>about">About</a></li>
+          <li><a href="<?= LINK; ?>contact">Contact</a></li>
         </ul>
       </nav>
       <div class="social-media">

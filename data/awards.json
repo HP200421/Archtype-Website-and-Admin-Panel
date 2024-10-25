@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Babylon",
+    "description": "Aesa Award 2011",
+    "imgUrl": "Babylon.jpg"
+  },
+  {
+    "name": "Sky View",
+    "description": "Bai Award 2012",
+    "imgUrl": "Sky_View.jpg"
+  },
+  {
+    "name": "Heritage Wing At Ramsukh Mahabaleshwar",
+    "description": "Aesa Award 2015",
+    "imgUrl": "Heritage_Wing.jpg"
+  },
+  {
+    "name": "Reya",
+    "description": "Aesa Award 2015",
+    "imgUrl": "Reya.jpg"
+  },
+  {
+    "name": "Ramsukh House",
+    "description": "Aesa Award 2016",
+    "imgUrl": "Ramsukh_House.jpg"
+  }
+]

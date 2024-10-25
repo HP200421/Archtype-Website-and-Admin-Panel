@@ -2,11 +2,11 @@
     <div class="fixed-bottom-nav d-flex flex-column flex-lg-row justify-content-around position-fixed">
       <nav>
         <ul class="nav-list">
-          <li><a href="/archtype/portfolio/architectural-project">Architecture</a></li> 
-          <li><a href="/archtype/portfolio/landscape">Landscape</a></li> 
-          <li><a href="/archtype/portfolio/awards">Awards</a></li>
-          <li><a href="/archtype/about">About</a></li>
-          <li><a href="/archtype/contact">Contact</a></li>
+          <li><a href="<?= LINK; ?>portfolio/architectural-project">Architecture</a></li> 
+          <li><a href="<?= LINK; ?>portfolio/landscape">Landscape</a></li> 
+          <li><a href="<?= LINK; ?>about/awards">Awards</a></li>
+          <li><a href="<?= LINK; ?>about">About</a></li>
+          <li><a href="<?= LINK; ?>contact">Contact</a></li>
         </ul>
       </nav>
       <div class="social-media">
@@ -22,5 +22,6 @@
     <script src="<?= LINK; ?>assets/vendor/owlcarousel/owl.carousel.min.js"></script>
     <script src="<?= LINK; ?>assets/vendor/fancybox/jquery.fancybox.min.js"></script>
     <script src="<?= LINK; ?>assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </body>
 </html>

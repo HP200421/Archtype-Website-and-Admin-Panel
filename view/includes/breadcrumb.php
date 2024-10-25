@@ -11,7 +11,7 @@ $breadcrumbItems = [];
 foreach ($segments as $index => $segment) {
 
   // Skip the first item (web root)
-  if($index === 0 || $index === 1) {
+  if($index === 0) {
     continue;
   }
     // Create the link for the current segment

@@ -117,7 +117,11 @@ img {
   padding: 10px 10px;
 }
 
-.nav-list a.active {
+.nav-list a:hover {
+  color: orange;
+}
+
+.nav-list a:active {
   color: orange;
 }
 
@@ -225,6 +229,32 @@ img {
   width: 700px;
 }
 
+.about-us p {
+  text-align: justify;
+}
+
+.award-image {
+  width: 350px;
+  height: 200px;
+  background-size: contain;
+  transition: filter 1s ease;
+  filter: grayscale(100%);
+}
+
+.award-image:hover {
+  filter: grayscale(0%);
+}
+
+.awards-section-content div {
+  font-size: 14px;
+  text-align: center;
+}
+
+.awards-section-content p {
+  font-size: 12px;
+  text-align: center;
+}
+
 /* Media queries for responsive design and add custom classes */
 @media (max-width: 768px) {
   .custom-position {
@@ -278,6 +308,11 @@ img {
 
   .thumbnail-image {
     margin-left: -10px;
+  }
+
+  .award-image {
+    width: 100%;
+    height: auto;
   }
 }
 
