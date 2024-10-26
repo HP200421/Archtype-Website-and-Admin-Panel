@@ -19,8 +19,13 @@ $(document).ready(function () {
             "</option>";
         });
         $("#parentCategory").html(options);
-        let selectedValue = $("#parentCategory").data("value");
-        $("#parentCategory").val(selectedValue);
+
+        // Set the selected main category for edit
+        let selectedMainCategory = $("#parentCategory").data("value");
+        $("#parentCategory").val(selectedMainCategory);
+
+        // Load the subcategories based on the selected main category for edit
+        loadSubCategories(selectedMainCategory);
       },
       error: function (jqXHR, textStatus, errorThrown) {
         console.log("AJAX error: ", textStatus, errorThrown);
@@ -54,6 +59,10 @@ $(document).ready(function () {
             "</option>";
         });
         $("#subCategory").html(options);
+
+        // Set the selected subcategory for edit
+        let selectedSubCategory = $("#subCategory").data("value");
+        $("#subCategory").val(selectedSubCategory);
       },
       error: function (jqXHR, textStatus, errorThrown) {
         console.log("AJAX error: ", textStatus, errorThrown);
@@ -71,6 +80,7 @@ $(document).ready(function () {
     loadSubCategories(mainCategoryId);
   });
 
+  // Check if it's edit mode based on action input and load categories accordingly
   let isEdit = $("input[name='action']").val();
   if (isEdit) {
     loadParentCategories();

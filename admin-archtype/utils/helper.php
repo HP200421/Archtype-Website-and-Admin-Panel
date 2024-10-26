@@ -44,12 +44,12 @@ function uploadFile($files) {
     $filePaths = [];
     $uploadSuccess = true;
     $uploadError = '';
-    $currentTimestamp = time(); 
     
     // Handle both single and multiple file uploads
     if (is_array($files['name'])) {
         foreach ($files['name'] as $key => $fileName) {
-            $fileName = $currentTimestamp . "_" . $fileName; // Add timestamp for multiple files
+            $uniquePrefix = uniqid(); // Generate a unique ID for each file
+            $fileName = $uniquePrefix . "_" . $fileName; // Add unique prefix to file name
             $targetFilePath = $targetDir . basename($fileName);
             $fileType = strtolower(pathinfo($targetFilePath, PATHINFO_EXTENSION));
 
@@ -78,8 +78,9 @@ function uploadFile($files) {
         }
     } else {
         // Handle single file upload
-        $fileName = $currentTimestamp . "_" . $files['name']; // Add timestamp for single file
-        $targetFilePath = $targetDir . basename($fileName); // Use updated file name with timestamp
+        $uniquePrefix = uniqid(); // Generate a unique ID for the single file
+        $fileName = $uniquePrefix . "_" . $files['name']; // Add unique prefix to file name
+        $targetFilePath = $targetDir . basename($fileName); // Use updated file name with unique prefix
         $fileType = strtolower(pathinfo($targetFilePath, PATHINFO_EXTENSION));
 
         // Check file type
@@ -91,7 +92,7 @@ function uploadFile($files) {
             $uploadSuccess = false;
             $uploadError = 'File size for file: ' . $files['name'] . ' should not exceed 2MB.';
         } elseif (move_uploaded_file($files['tmp_name'], $targetFilePath)) {
-            $filePaths[] = basename($fileName); // Use updated file name with timestamp
+            $filePaths[] = basename($fileName); // Use updated file name with unique prefix
         } else {
             $uploadSuccess = false;
             $uploadError = 'There was an error uploading file: ' . $files['name'] . '.';

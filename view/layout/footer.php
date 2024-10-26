@@ -2,7 +2,8 @@
     <div class="fixed-bottom-nav d-flex flex-column flex-lg-row justify-content-around position-fixed">
       <nav>
         <ul class="nav-list">
-          <li><a href="<?= LINK; ?>portfolio/architectural-project">Architecture</a></li> 
+          <li><a href="<?= LINK; ?>portfolio/architecture">Architecture</a></li> 
+          <li><a href="<?= LINK; ?>portfolio/interior">Interior</a></li> 
           <li><a href="<?= LINK; ?>portfolio/landscape">Landscape</a></li> 
           <li><a href="<?= LINK; ?>about/awards">Awards</a></li>
           <li><a href="<?= LINK; ?>about">About</a></li>

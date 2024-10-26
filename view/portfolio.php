@@ -111,7 +111,7 @@ $conn->close();
                         <?php endforeach; ?>
                     </div>
                 <?php else: ?>
-                    <h5>No posts found.</h5>
+                    <span class="text-secondary">No posts found</span>
                 <?php endif; ?>
             </div>
         </div>

@@ -13,11 +13,11 @@ RewriteEngine On
 RewriteBase /archtype/
 
 # Pass category and subcategory to portfolio.php located in the view folder
-RewriteRule ^portfolio/(architectural-project|landscape|interior|awards)/([^/]+)/?$ view/portfolio.php?category=$1&subcategory=$2 [L]
+RewriteRule ^portfolio/(architecture|landscape|interior)/([^/]+)/?$ view/portfolio.php?category=$1&subcategory=$2 [L]
 # Pass category to portfolio.php located in the view folder (for category only)
-RewriteRule ^portfolio/(architectural-project|landscape|interior|awards)/?$ view/portfolio.php?category=$1 [L]
+RewriteRule ^portfolio/(architecture|landscape|interior)/?$ view/portfolio.php?category=$1 [L]
 # Pass category, subcategory, and post to post-details.php located in the view folder
-RewriteRule ^portfolio/(architectural-project|landscape|interior|awards)/([^/]+)/([^/]+)/?$ view/post-details.php?category=$1&subcategory=$2&post=$3 [L]
+RewriteRule ^portfolio/(architecture|landscape|interior)/([^/]+)/([^/]+)/?$ view/post-details.php?category=$1&subcategory=$2&post=$3 [L]
 
 # Rewrite rules for About and Contact pages
 RewriteRule ^about$ view/pages/about.php [L]
