@@ -1,5 +1,5 @@
 <?php
-$limit = 25; 
+$limit = 15; 
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $offset = ($page - 1) * $limit;
 ?>
@@ -28,7 +28,7 @@ $offset = ($page - 1) * $limit;
 
         <div class="d-flex align-items-center">
             <a href="<?= LINK; ?>post/add" class="btn btn-primary">
-                <i class="icon-plus"></i> Add Event
+                <i class="icon-plus"></i> Add Post
             </a>
         </div>
     </div>
@@ -38,7 +38,7 @@ $offset = ($page - 1) * $limit;
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Event List</h4>
+                <h4 class="card-title">Post List</h4>
                 <div class="table-responsive pt-1">
                     <table class="table table-striped table-bordered">
                         <thead>

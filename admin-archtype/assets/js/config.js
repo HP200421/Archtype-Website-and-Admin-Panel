@@ -18,6 +18,11 @@ $(document).ready(function () {
   $("#your_summernote").summernote({
     height: 300,
     placeholder: "Start writing...",
+    toolbar: [
+      ["style", ["style", "bold", "italic", "underline", "clear"]],
+      ["para", ["ul", "ol", "paragraph"]],
+    ],
+    styleTags: ["p", "h1", "h2", "h3", "h4", "h5", "h6"],
   });
   $(".dropdown-toggle").dropdown();
 
@@ -47,6 +52,7 @@ $(document).ready(function () {
           $(this).next(".error-message").text(errorMessage);
         }
       });
+
     if (isValid) {
       $.ajax({
         url: $(this).attr("action"),

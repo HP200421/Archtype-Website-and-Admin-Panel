@@ -12,7 +12,7 @@ class Post extends Authenticated{
         $subCategoryId = isset($_GET['sub_id']) ? $_GET['sub_id'] : '';
     
         // Pagination
-        $limit = 25;
+        $limit = 15;
         $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
         $offset = ($page - 1) * $limit;
     

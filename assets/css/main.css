@@ -230,6 +230,24 @@ img {
   width: 700px;
 }
 
+.post-details p {
+  font-size: 12px;
+}
+
+.post-details span {
+  font-size: 12px;
+}
+
+.post-details ul {
+  font-size: 12px;
+  list-style-type: circle;
+  /* padding-left: 20px; */
+}
+
+.post-details ol {
+  font-size: 12px;
+}
+
 .about-us p {
   text-align: justify;
 }
@@ -283,7 +301,7 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: end;
-    gap: 10px;
+    gap: 15px;
     text-align: center;
     margin-top: 1px;
     border-top: 1px solid #ddd;

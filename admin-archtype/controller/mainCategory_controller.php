@@ -47,7 +47,7 @@ class MainCategory extends Authenticated{
         header('Content-Type: application/json');
         
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $name = isset($_POST['category_name']) ? trim($_POST['category_name']) : '';
+            $name = htmlSpecialchars(isset($_POST['category_name'])) ? htmlSpecialchars(trim($_POST['category_name'])) : '';
             $slug = createSlug($name);
     
          

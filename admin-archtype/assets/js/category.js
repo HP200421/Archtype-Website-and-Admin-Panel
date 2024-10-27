@@ -1,5 +1,48 @@
 $(document).ready(function () {
   // Load parent categories (main categories)
+
+  function addField() {
+    // Create a new div for the field group
+    const fieldGroup = $("<div>", { class: "field-group mt-2" });
+
+    // Create the new input field for the image
+    const imageInput = $("<input>", {
+      type: "file",
+      name: "post_files[]",
+      class: "form-control mb-1",
+      accept: "image/*",
+      required: true,
+    });
+
+    // Create the textarea for the description
+    const textArea = $("<textarea>", {
+      name: "descriptions[]",
+      class: "form-control mb-1",
+      rows: 2,
+      placeholder: "Enter description",
+      required: true,
+    });
+
+    // Create the remove button
+    const removeButton = $("<button>", {
+      type: "button",
+      class: "btn btn-sm btn-danger mb-1",
+      text: "Remove",
+      click: function () {
+        $(this).parent(".field-group").remove();
+      },
+    });
+
+    // Append the input, textarea, and button to the field group
+    fieldGroup.append(imageInput, textArea, removeButton);
+
+    // Append the field group to the container
+    $("#image-field-container").append(fieldGroup);
+  }
+
+  // Add initial click event for add button
+  $("#add-image-field").on("click", addField);
+
   function loadParentCategories() {
     if ($("#parentCategory").data("loading")) return;
     $("#parentCategory").data("loading", true);
