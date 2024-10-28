@@ -6,13 +6,13 @@
         <p class="card-description">Fill the following details</p>
 
         <div class="col-md-6">
-          <div class="form-group row">
-            <label class="col-sm-3 col-form-label">Title *</label>
-            <div class="col-sm-9">
-              <input type="text" name="post_name" class="form-control form-control-sm" placeholder="Enter post title" vali="yes" />
-              <span class="error-message" style="color:red"></span> 
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Title *</label>
+              <div class="col-sm-9">
+                <input type="text" name="post_name" class="form-control form-control-sm" placeholder="Enter post title" vali="yes" />
+                <span class="error-message" style="color:red"></span> 
+              </div>
             </div>
-          </div>
         </div>
 
         <div class="row">
@@ -79,17 +79,19 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col-12">
-            <label class="form-label">Post Images and Descriptions*</label>
-            <div id="image-field-container"></div>
-            <button type="button" id="add-image-field" class="btn btn-sm btn-primary mt-2">Add Image & Description</button>
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Post Images*</label>
+              <div class="col-sm-9">
+                <input type="file" name="post_files[]" class="form-control" accept="image/*" multiple vali="yes" />
+                <span class="error-message" style="color:red"></span> 
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="row mt-3">
+        <div class="row">
           <div class="col-12">
             <label class="form-label">Details</label>
             <textarea name="details" id="your_summernote" class="form-control" rows="4" placeholder="Enter post details"></textarea>
