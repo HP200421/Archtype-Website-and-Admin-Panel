@@ -75,7 +75,7 @@
         <ul class="list-unstyled d-flex fs-6 gap-4 mb-0 text-uppercase">
           <li><a href="<?= LINK; ?>portfolio/architecture" class="text-decoration-none text-white">Architecture</a></li>
           <li><a href="<?= LINK; ?>portfolio/interior" class="text-decoration-none text-white">Interior</a></li>
-          <li><a href="<?= LINK; ?>portfolio/landscape" class="text-decoration-none text-white">Landscape</a></li>
+          <li><a href="<?= LINK; ?>portfolio/upcoming-projects" class="text-decoration-none text-white">Upcoming Projects</a></li>
         </ul>
       </nav>
       <div class="order-1 order-lg-2">
@@ -89,7 +89,7 @@
         <ul class="nav-list">
           <li><a href="<?= LINK; ?>portfolio/architecture">Architecture</a></li> 
           <li><a href="<?= LINK; ?>portfolio/interior">Interior</a></li> 
-          <li><a href="<?= LINK; ?>portfolio/landscape">Landscape</a></li> 
+          <li><a href="<?= LINK; ?>portfolio/upcoming-projects">Upcoming Projects</a></li> 
           <li><a href="<?= LINK; ?>about/awards">Awards</a></li>
           <li><a href="<?= LINK; ?>about">About</a></li>
           <li><a href="<?= LINK; ?>contact">Contact</a></li>

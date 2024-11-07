@@ -4,7 +4,7 @@
         <ul class="nav-list">
           <li><a href="<?= LINK; ?>portfolio/architecture">Architecture</a></li> 
           <li><a href="<?= LINK; ?>portfolio/interior">Interior</a></li> 
-          <li><a href="<?= LINK; ?>portfolio/landscape">Landscape</a></li> 
+          <li><a href="<?= LINK; ?>portfolio/upcoming-projects">Upcoming Projects</a></li> 
           <li><a href="<?= LINK; ?>about/awards">Awards</a></li>
           <li><a href="<?= LINK; ?>about">About</a></li>
           <li><a href="<?= LINK; ?>contact">Contact</a></li>

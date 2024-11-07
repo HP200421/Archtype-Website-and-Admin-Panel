@@ -7,7 +7,7 @@
         <ul class="z-index-5 list-unstyled">
             <li class="nav-item"><a class="nav-link" href="<?= LINK; ?>portfolio/architecture">Architecture</a></li>
             <li class="nav-item"><a class="nav-link" href="<?= LINK; ?>portfolio/interior">Interior</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= LINK; ?>portfolio/landscape">Landscape</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= LINK; ?>portfolio/upcoming-projects">Upcoming Projects</a></li>
             <li class="nav-item"><a class="nav-link" href="<?= LINK; ?>about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="<?= LINK; ?>about/awards">Awards</a></li>
             <li class="nav-item"><a class="nav-link" href="<?= LINK; ?>contact">Contact</a></li>

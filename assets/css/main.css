@@ -187,7 +187,7 @@ img {
 
 .thumbnail-image {
   width: 222px;
-  height: 111px;
+  height: 105px;
   background-size: contain;
   max-width: 112%;
   transition: filter 1s ease;
@@ -318,7 +318,7 @@ img {
   .categoryListVisible {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 8px;
   }
 
   .post-image {
