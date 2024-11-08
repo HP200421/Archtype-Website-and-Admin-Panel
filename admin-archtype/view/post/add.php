@@ -1,7 +1,7 @@
 <div class="col-12 grid-margin">
   <div class="card">
     <div class="card-body">
-      <h4 class="card-title">Post Details</h4>
+      <h4 class="card-title">Project Details</h4>
       <form class="ajaxForm form-sample" action="<?= LINK; ?>post/create" method="post" enctype="multipart/form-data" callback="postCreate">
         <p class="card-description">Fill the following details</p>
 
@@ -9,7 +9,7 @@
             <div class="form-group row">
               <label class="col-sm-3 col-form-label">Title *</label>
               <div class="col-sm-9">
-                <input type="text" name="post_name" class="form-control form-control-sm" placeholder="Enter post title" vali="yes" />
+                <input type="text" name="post_name" class="form-control form-control-sm" placeholder="Enter project title" vali="yes" />
                 <span class="error-message" style="color:red"></span> 
               </div>
             </div>

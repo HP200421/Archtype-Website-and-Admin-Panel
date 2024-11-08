@@ -12,7 +12,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'about';
         <div class="col-6 col-lg-3 custom-burger">
             <?php include '../includes/burger.php'; ?>
         </div>
-        <div class="col-12 col-sm-6 col-lg-9">
+        <div class="col-12 col-sm-6 col-lg-9 custom-margin">
             <?php include '../includes/breadcrumb.php'; ?>
         </div>
 
@@ -24,7 +24,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'about';
             </ul>
         </div>
 
-        <div class="col-12 col-lg-9">
+        <div class="col-12 col-lg-9 custom-margin">
             <div class="post-details about-us">
                 <?php
                 switch ($page) {

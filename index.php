@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?= LINK; ?>assets/css/main.css" />
 
   </head>
-  <body>
+  <body class="roboto-thin">
     <main>
       <section class="hero">
         <div class="owl-carousel owl-theme">

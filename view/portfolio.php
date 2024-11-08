@@ -66,7 +66,7 @@ $conn->close();
         <div class="col-12 col-sm-6 col-lg-3 custom-burger p-0">
             <?php include 'includes/burger.php'; ?>
         </div>
-        <div class="col-12 col-sm-6 col-lg-9 p-0">
+        <div class="col-12 col-sm-6 col-lg-9 p-0 custom-margin">
             <?php include 'includes/breadcrumb.php'; ?>
         </div>
 
@@ -86,7 +86,7 @@ $conn->close();
         </div>
 
         <!-- Content Section -->
-        <div class="col-12 col-sm-6 col-lg-9">
+        <div class="col-12 col-sm-6 col-lg-9 custom-margin">
             <div class="content">
                 <?php if (!empty($posts)): ?>
                     <div class="row">
@@ -111,7 +111,7 @@ $conn->close();
                         <?php endforeach; ?>
                     </div>
                 <?php else: ?>
-                    <span class="text-secondary">No posts found</span>
+                    <span class="roboto-thin">No projects found</span>
                 <?php endif; ?>
             </div>
         </div>

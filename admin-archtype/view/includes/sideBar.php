@@ -16,7 +16,7 @@
             <li class="nav-item">
               <a class="nav-link" href="<?= LINK; ?>post">
               <i class="fa fa-edit menu-icon"></i>
-                <span class="menu-title">Post</span>
+                <span class="menu-title">Projects</span>
               </a>
             </li>
           </ul>

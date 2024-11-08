@@ -9,7 +9,7 @@ include '../layout/head.php';
         <div class="col-6 col-lg-3 custom-burger">
             <?php include '../includes/burger.php'; ?>
         </div>
-        <div class="col-12 col-sm-6 col-lg-9">
+        <div class="col-12 col-sm-6 col-lg-9 custom-margin">
             <?php include '../includes/breadcrumb.php'; ?>
         </div>
         
@@ -19,7 +19,7 @@ include '../layout/head.php';
             </ul>
         </div>
         
-        <div class="col-12 col-lg-9">
+        <div class="col-12 col-lg-9 custom-margin">
           <form id="contact-form" action="" method="post" class="mb-4 contact-form">
             <div class="row mb-3">
               <div class="col-md-6">

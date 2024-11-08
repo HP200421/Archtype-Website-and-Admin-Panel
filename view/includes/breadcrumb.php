@@ -35,7 +35,7 @@ foreach ($segments as $index => $segment) {
 }
 ?>
 
-<nav aria-label="breadcrumb" class="bread">
+<nav aria-label="breadcrumb" class="bread roboto-regular">
   <ol class="breadcrumb">
     <?php foreach ($breadcrumbItems as $index => $item): ?>
       <li class="breadcrumb-item <?php echo $index === count($breadcrumbItems) - 1 ? ' active' : ''; ?>" aria-current="<?php echo $index === count($breadcrumbItems) - 1 ? 'page' : ''; ?>">
