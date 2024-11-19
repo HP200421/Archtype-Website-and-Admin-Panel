@@ -328,14 +328,26 @@ img {
 }
 
 .award-image {
+  width: 238px;
+  height: 110px;
+  background-size: contain;
+  transition: filter 1s ease;
+  filter: grayscale(100%);
+}
+
+.news-image {
   width: 350px;
-  height: 200px;
+  height: 150px;
   background-size: contain;
   transition: filter 1s ease;
   filter: grayscale(100%);
 }
 
 .award-image:hover {
+  filter: grayscale(0%);
+}
+
+.news-image:hover {
   filter: grayscale(0%);
 }
 
@@ -416,6 +428,11 @@ img {
     height: auto;
   }
 
+  .news-image {
+    width: 100%;
+    height: auto;
+  }
+
   .custom-margin {
     margin-left: 0px;
   }
@@ -427,4 +444,19 @@ img {
   background: -webkit-linear-gradient(#f90505, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+} */
+/* .award-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.awards-section-content {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.gallery-item {
+  text-align: center;
 } */

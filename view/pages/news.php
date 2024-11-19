@@ -25,7 +25,7 @@ if (file_exists($dataFilePath)) {
                            data-caption="<?php echo htmlspecialchars($award['name']); ?>">
                             <img src="<?= LINK; ?>assets/images/<?php echo htmlspecialchars($award['imgUrl']); ?>" 
                                  alt="<?php echo htmlspecialchars($award['name']); ?>" 
-                                 class="fancybox award-image" />
+                                 class="fancybox news-image" />
                         </a>
                         <div class="awards-section-content">
                             <div class="text-uppercase"><?php echo htmlspecialchars($award['name']); ?></div>
