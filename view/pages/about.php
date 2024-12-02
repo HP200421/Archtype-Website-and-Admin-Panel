@@ -39,11 +39,11 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'about';
                         break;
                     default:
                         ?>
-                        <p>We design private houses, apartments, as well as public rooms and hotel complexes followed by project implementation. Detailing in our work is an inherent part of our designs. You can expect a no-compromising approach from us towards the quality and finishing of projects. Our focus remains on executing every detail to perfection.</p>
-                        <p>We believe in a holistic approach to design, rather than focusing on individual items, ensuring the desired ambiance across the entire space. Innovation in design and style has always been our character, and we continually strive to push the boundaries of creativity.</p>
-                        <p>Our team constantly researches new materials and their technical aspects, enhancing our design knowledge. We also maintain an in-house library of samples and brochures to provide ready data and references, ensuring informed design choices.</p>
-                        <p>We excel at adding value through design features, artifacts, and landscaping, bringing a unique identity to each project. Our commitment to detailing and presentation helps in visualizing and executing every project with clarity and precision.</p>
-                        <p>Collaboration between our team members, working across different categories of the project, is key to delivering the satisfaction our clients expect.</p>
+                        <p>Archetype is a design firm seamlessly integrating architecture, interiors, and landscape to create unique spatial experiences.
+                        Archetype has projects across India, providing integral design solutions with an exemplary eye for detailing.
+                        An innovative approach to each project has been a defining characteristic throughout 25 years of practice.</p>
+                        <p>A young team of architects and interior designers, under the guidance of Ar. Prakash Chandak, has developed a distinct style of presentation and detailing, offering clear visualization for understanding designs and ensuring immaculate execution. In parallel, Archetype pioneers various social and cultural initiatives.</p>
+                        <p>The firm applies inherent research in materials and methodical practices to contribute to sustainable and environmental causes. Promoting local resources has been a key factor at Archetype, contributing to socio-economic development.</p>
                         <?php
                         break;
                 }

@@ -11,17 +11,17 @@
     ]
   },
   {
-    "name": "Sky View",
-    "description": "Awarded for Bai in 2012",
+    "name": "Sky Vie",
+    "description": "Awarded for Asia Pacific in 2012",
     "imgUrl": "Sky_View.jpg",
     "pdfImages": [
       {
         "imgUrl": "Bai_2012.jpg",
-        "description": "Bai 2012 Certificate for Sky View"
+        "description": "ASIA PACIFIC 2012 - SKY VIE"
       },
       {
         "imgUrl": "Bai_2011.jpg",
-        "description": "Bai 2011 Certificate for Sky View"
+        "description": "Bai 2011 Certificate for Sky Vie"
       }
     ]
   },
@@ -44,10 +44,6 @@
       {
         "imgUrl": "Aesa_2015_Reya.jpg",
         "description": "Aesa 2015 Certificate for Reya"
-      },
-      {
-        "imgUrl": "Sky_View.jpg",
-        "description": "Certificate for Sky View Project"
       }
     ]
   },
@@ -70,6 +66,17 @@
       {
         "imgUrl": "Aesa_2024.jpg",
         "description": "Aesa 2024 Certificate for Abhimannshree House"
+      }
+    ]
+  },
+  {
+    "name": "MVPM Hostel",
+    "description": "Awarded for Aesa in 2024",
+    "imgUrl": "Mvpm_Hostel.jpg",
+    "pdfImages": [
+      {
+        "imgUrl": "Aesa_2024_Hostel.jpg",
+        "description": "Aesa 2024 Certificate for MVPM Hostel"
       }
     ]
   }
