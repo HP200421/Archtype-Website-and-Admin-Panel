@@ -5,7 +5,7 @@
     <a class="text-decoration-none text-dark p-2 roboto-regular" href="<?= LINK; ?>">ARCHTYPE</a>
     <nav id="burgerNav" class="hidden p-1 pt-3 custom-position roboto-thin">
         <ul class="z-index-5 list-unstyled">
-            <li class="nav-item"><a class="nav-link" href="<?= LINK; ?>portfolio/architecture">Architecture</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= LINK; ?>portfolio/architectural">Architecture</a></li>
             <li class="nav-item"><a class="nav-link" href="<?= LINK; ?>portfolio/interior">Interior</a></li>
             <li class="nav-item"><a class="nav-link" href="<?= LINK; ?>portfolio/upcoming-projects">Upcoming Projects</a></li>
             <li class="nav-item"><a class="nav-link" href="<?= LINK; ?>about">About</a></li>

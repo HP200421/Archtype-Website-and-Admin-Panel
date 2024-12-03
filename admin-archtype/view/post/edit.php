@@ -28,7 +28,7 @@
             <div class="form-group row">
               <label class="col-sm-3 col-form-label">Location *</label>
               <div class="col-sm-9">
-                <input type="text" name="location" class="form-control form-control-sm" placeholder="Enter location" vali="yes" value="<?= $row["location"];?>" />
+                <input type="text" name="location" class="form-control form-control-sm" placeholder="Enter location" value="<?= $row["location"];?>" />
                 <span class="error-message" style="color:red"></span> 
               </div>
             </div>

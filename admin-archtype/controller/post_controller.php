@@ -111,8 +111,8 @@ class Post extends Authenticated{
             $thumbnail_image = $_FILES['thumbnail'];
             $slug = createSlug($postName);
     
-            if (empty($postName) || empty($location) || empty($subCatId) || empty($mainCatId)) {
-                echo json_encode(['success' => false, 'message' => 'Post name, location, sub-category, and main category are required.']);
+            if (empty($postName) || empty($subCatId) || empty($mainCatId)) {
+                echo json_encode(['success' => false, 'message' => 'Post name, sub-category, and main category are required.']);
                 exit();
             }
     
@@ -351,7 +351,7 @@ class Post extends Authenticated{
                 $thumbnail_image = $_FILES['thumbnail'];
                 
                 // Validate input fields
-                if ($postName == "" || $location == "" || $subCatId == "" || $mainCatId == "") {
+                if ($postName == "" || $subCatId == "" || $mainCatId == "") {
                     echo json_encode(['success' => false, 'message' => 'All fields are required.']);
                     exit;
                 }

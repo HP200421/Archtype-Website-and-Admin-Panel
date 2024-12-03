@@ -73,7 +73,7 @@
     <div class="fixed-arch-div d-flex flex-column flex-lg-row justify-content-around align-items-end position-fixed w-100 z-index-5">
       <nav class="order-2 order-lg-1 animate-in">
         <ul class="list-unstyled d-flex fs-6 gap-4 mb-0 text-uppercase">
-          <li><a href="<?= LINK; ?>portfolio/architecture" class="text-decoration-none text-white">Architecture</a></li>
+          <li><a href="<?= LINK; ?>portfolio/architectural" class="text-decoration-none text-white">Architecture</a></li>
           <li><a href="<?= LINK; ?>portfolio/interior" class="text-decoration-none text-white">Interior</a></li>
           <li><a href="<?= LINK; ?>portfolio/upcoming-projects" class="text-decoration-none text-white">Upcoming Projects</a></li>
         </ul>
@@ -87,7 +87,7 @@
     <div class="fixed-bottom-nav d-flex flex-column flex-lg-row justify-content-around position-fixed">
       <nav>
         <ul class="nav-list">
-          <li><a href="<?= LINK; ?>portfolio/architecture">Architecture</a></li> 
+          <li><a href="<?= LINK; ?>portfolio/architectural">Architecture</a></li> 
           <li><a href="<?= LINK; ?>portfolio/interior">Interior</a></li> 
           <li><a href="<?= LINK; ?>portfolio/upcoming-projects">Upcoming Projects</a></li> 
           <li><a href="<?= LINK; ?>about/awards">Awards</a></li>
