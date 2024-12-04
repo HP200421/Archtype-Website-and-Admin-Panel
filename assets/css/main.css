@@ -261,7 +261,7 @@ img {
 }
 
 .thumbnail-image {
-  width: 222px;
+  width: 215px;
   height: 105px;
   background-size: contain;
   max-width: 112%;
@@ -273,10 +273,16 @@ img {
   filter: grayscale(0%);
 }
 
-.post-image {
+/* .post-image {
   width: 700px;
   height: 350px;
   object-fit: cover;
+} */
+
+.post-image {
+  width: 700px;
+  height: auto;
+  object-fit: contain;
 }
 
 .post-title {

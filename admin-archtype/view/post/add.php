@@ -75,6 +75,8 @@
               <label class="col-sm-3 col-form-label">Thumbnail Image*</label>
               <div class="col-sm-9">
                 <input type="file" name="thumbnail" class="form-control" accept="image/*" vali="yes" />
+                <span class="text-muted text-small">Max file size: 1MB</span><br>
+                <span class="text-muted text-small">Image should be atleast 300 pixels in width</span>
                 <span class="error-message" style="color:red"></span> 
               </div>
             </div>
@@ -85,6 +87,8 @@
               <label class="col-sm-3 col-form-label">Post Images*</label>
               <div class="col-sm-9">
                 <input type="file" name="post_files[]" class="form-control" accept="image/*" multiple vali="yes" />
+                <span class="text-muted text-small">Max file size: 1MB</span><br>
+                <span class="text-muted text-small">Image should be 700 pixels in width</span>
                 <span class="error-message" style="color:red"></span> 
               </div>
             </div>

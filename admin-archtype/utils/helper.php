@@ -60,10 +60,10 @@ function uploadFile($files) {
                 break;
             }
 
-            // Check file size (2MB limit)
-            if ($files['size'][$key] > 2000000) {
+            // Check file size (1MB limit)
+            if ($files['size'][$key] > 1000000) {
                 $uploadSuccess = false;
-                $uploadError = 'File size for file: ' . $fileName . ' should not exceed 2MB.';
+                $uploadError = 'File size for file: ' . $fileName . ' should not exceed 1MB.';
                 break;
             }
 
@@ -87,10 +87,10 @@ function uploadFile($files) {
         if (!in_array($fileType, $allowTypes)) {
             $uploadSuccess = false;
             $uploadError = 'Invalid file format for file: ' . $files['name'] . '. Only JPG, JPEG, and PNG files are allowed.';
-        } elseif ($files['size'] > 2000000) {
+        } elseif ($files['size'] > 1000000) {
             // Check file size
             $uploadSuccess = false;
-            $uploadError = 'File size for file: ' . $files['name'] . ' should not exceed 2MB.';
+            $uploadError = 'File size for file: ' . $files['name'] . ' should not exceed 1MB.';
         } elseif (move_uploaded_file($files['tmp_name'], $targetFilePath)) {
             $filePaths[] = basename($fileName); // Use updated file name with unique prefix
         } else {
