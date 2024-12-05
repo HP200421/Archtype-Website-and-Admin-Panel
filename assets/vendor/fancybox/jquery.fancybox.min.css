@@ -58,7 +58,7 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-is-open .fancybox-bg {
-  opacity: 0.9;
+  opacity: 1;
   transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 

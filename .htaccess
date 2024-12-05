@@ -18,7 +18,7 @@ RewriteRule ^portfolio/(architectural|upcoming-projects|interior)/([^/]+)/?$ vie
 RewriteRule ^portfolio/(architectural|upcoming-projects|interior)/?$ view/portfolio.php?category=$1 [L]
 # Pass category, subcategory, and post to post-details.php located in the view folder
 RewriteRule ^portfolio/(architectural|upcoming-projects|interior)/([^/]+)/([^/]+)/?$ view/post-details.php?category=$1&subcategory=$2&post=$3 [L]
-
+RewriteRule ^portfolio/(architectural|upcoming-projects|interior)/([^/]+)/?$ view/post-details.php?category=$1&post=$2 [L]
 # Rewrite rules for About and Contact pages
 RewriteRule ^about$ view/pages/about.php [L]
 RewriteRule ^contact$ view/pages/contact.php [L]

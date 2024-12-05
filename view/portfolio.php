@@ -98,6 +98,7 @@ $conn->close();
                                         if (is_array($image) && !empty($image)):
                                             $firstImage = $image[0];
                                     ?>
+                                        <!-- <a href="<?= sprintf('%sportfolio/%s/%s%s', LINK, htmlspecialchars($categorySlug), !empty($subCategorySlug) ? htmlspecialchars($subCategorySlug) . '/' : '', htmlspecialchars($post['slug'])); ?>" class="post-link"> -->
                                         <a href="<?= LINK; ?>portfolio/<?php echo htmlspecialchars($categorySlug); ?>/<?php echo htmlspecialchars($subCategory['slug']); ?>/<?php echo htmlspecialchars($post['slug']); ?>" class="post-link"> 
                                             <img loading="lazy" src="<?php echo htmlspecialchars(LINK . 'uploads/' . $firstImage); ?>"  class="thumbnail-image" />
                                         </a>
