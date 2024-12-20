@@ -2,6 +2,8 @@
 include '../config.php';
 include 'layout/head.php';
 
+$subcategoryImages = json_decode(file_get_contents('../data/subcategory.json'), true);  
+
 // Get the main category and subcategory from the URL
 $categorySlug = $_GET['category'] ?? '';
 $subCategorySlug = $_GET['subcategory'] ?? '';
@@ -35,16 +37,22 @@ if ($categorySlug) {
 
         // Fetch posts based on main category and optional subcategory
         if ($subCategorySlug) {
-            // Fetch posts by both main category and subcategory
+            // Fetch posts filtered by main category and subcategory
             $stmt = $conn->prepare("
-                SELECT posts.* FROM posts 
-                JOIN sub_category ON sub_category.id = posts.sub_id 
+                SELECT posts.*, sub_category.slug AS subcategory_slug
+                FROM posts
+                JOIN sub_category ON sub_category.id = posts.sub_id
                 WHERE posts.main_id = ? AND sub_category.slug = ?
             ");
             $stmt->bind_param("is", $categoryId, $subCategorySlug);
         } else {
-            // Fetch posts only by main category
-            $stmt = $conn->prepare("SELECT * FROM posts WHERE main_id = ?");
+            // Fetch all posts within the main category (including those with no subcategory)
+            $stmt = $conn->prepare("
+                SELECT posts.*, sub_category.slug AS subcategory_slug
+                FROM posts
+                LEFT JOIN sub_category ON sub_category.id = posts.sub_id
+                WHERE posts.main_id = ?
+            ");
             $stmt->bind_param("i", $categoryId);
         }
 
@@ -55,7 +63,6 @@ if ($categorySlug) {
 } else {
     echo "No category selected.";
 }
-
 $conn->close();
 ?>
 
@@ -73,11 +80,9 @@ $conn->close();
         <!-- Categories Section -->
         <div class="col-12 col-sm-6 col-lg-3 p-0">
             <ul id="category-list" class="ps-1 category-list categoryListVisible list-unstyled">
-                <li><a href="<?= LINK; ?>portfolio/<?php echo htmlspecialchars($categorySlug); ?>" class="text-decoration-none text-dark">All</a></li>
                 <?php foreach ($categories[$categorySlug] ?? [] as $subCategory): ?>
-                    <li>
-                        <a href="<?= LINK; ?>portfolio/<?php echo htmlspecialchars($categorySlug); ?>/<?php echo htmlspecialchars($subCategory['slug']); ?>" 
-                            class="text-decoration-none text-dark">
+                    <li class="category-list-item">
+                        <a href="<?= LINK; ?>portfolio/<?php echo htmlspecialchars($categorySlug); ?>/<?php echo htmlspecialchars($subCategory['slug']); ?>">
                             <?php echo htmlspecialchars($subCategory['subcategory_name']); ?>
                         </a>
                     </li>
@@ -88,7 +93,29 @@ $conn->close();
         <!-- Content Section -->
         <div class="col-12 col-sm-6 col-lg-9 custom-margin">
             <div class="content">
-                <?php if (!empty($posts)): ?>
+                <?php if (empty($subCategorySlug)): ?>
+                    <!-- Display the category's subcategories if no subcategory is selected -->
+                    <div class="row">
+                        <?php foreach ($categories[$categorySlug] ?? [] as $subCategory): ?>
+                            <div class="col-6 col-md-4 col-lg-3 mb-5"> 
+                                <div class="post">
+                                    <a href="<?= LINK; ?>portfolio/<?php echo htmlspecialchars($categorySlug); ?>/<?php echo htmlspecialchars($subCategory['slug']); ?>" class="category-link">
+                                    <?php
+                                            // Check if there are images for this subcategory in the JSON file
+                                            $subCategoryImages = $subcategoryImages[$subCategory['slug']] ?? [];
+                                            if (!empty($subCategoryImages)):
+                                                $image = $subCategoryImages[0]; // Get the first image for now
+                                        ?>
+                                            <img loading="lazy" src="<?= LINK; ?>assets/images/<?php echo htmlspecialchars($image); ?>" class="thumbnail-image" />
+                                        <?php endif; ?>
+                                        <div class="caetegory-name mt-2"><?php echo htmlspecialchars($subCategory['subcategory_name']); ?></div>
+                                    </a>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php elseif (!empty($posts)): ?>
+                    <!-- Display posts when a subcategory is selected -->
                     <div class="row">
                         <?php foreach ($posts as $post): ?>
                             <div class="col-6 col-md-4 col-lg-3 mb-5"> 
@@ -98,9 +125,8 @@ $conn->close();
                                         if (is_array($image) && !empty($image)):
                                             $firstImage = $image[0];
                                     ?>
-                                        <!-- <a href="<?= sprintf('%sportfolio/%s/%s%s', LINK, htmlspecialchars($categorySlug), !empty($subCategorySlug) ? htmlspecialchars($subCategorySlug) . '/' : '', htmlspecialchars($post['slug'])); ?>" class="post-link"> -->
-                                        <a href="<?= LINK; ?>portfolio/<?php echo htmlspecialchars($categorySlug); ?>/<?php echo htmlspecialchars($subCategory['slug']); ?>/<?php echo htmlspecialchars($post['slug']); ?>" class="post-link"> 
-                                            <img loading="lazy" src="<?php echo htmlspecialchars(LINK . 'uploads/' . $firstImage); ?>"  class="thumbnail-image" />
+                                        <a href="<?= LINK; ?>portfolio/<?php echo htmlspecialchars($categorySlug); ?>/<?php echo htmlspecialchars($post['subcategory_slug'] ?? 'all'); ?>/<?php echo htmlspecialchars($post['slug']); ?>" class="post-link">
+                                            <img loading="lazy" src="<?php echo htmlspecialchars(LINK . 'uploads/' . $firstImage); ?>"  class="subcategory-image" />
                                         </a>
                                         <div class="post-title"><?php echo htmlspecialchars($post['post_name']); ?></div>
                                         <div class="post-location"><?php echo htmlspecialchars($post['location']); ?></div>

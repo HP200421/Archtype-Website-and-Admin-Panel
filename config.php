@@ -1,6 +1,6 @@
 <?php
     // To view in mobile devices connected with same wifi
-    // define("LINK", "http://192.168.0.107/archtype/"); 
+    // define("LINK", "http://192.168.0.114/archtype/"); 
     define("LINK", "http://localhost/archtype/");
 
 
@@ -18,6 +18,11 @@
         $string = ucwords($string);              
         return $string;
     }
-    
 
+    function createSlug($string) {
+        $string = strtolower($string);
+        $string = preg_replace('/[^a-z0-9]+/', '-', $string); 
+        $string = trim($string, '-');
+        return $string;
+    }
 ?>

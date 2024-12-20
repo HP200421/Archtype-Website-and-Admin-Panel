@@ -1,5 +1,4 @@
 <?php
-
 $dataFilePath = '../../data/awards.json'; 
 
 if (file_exists($dataFilePath)) {
@@ -16,50 +15,30 @@ if (file_exists($dataFilePath)) {
 
 <div class="awards-section">
     <div class="row">
-        <?php if (!empty($awards)): ?>
-            <?php foreach ($awards as $award): ?>
-                <!-- Main Award Image -->
-                <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                    <div class="h-100 gallery-item">
-                        <a href="<?= LINK; ?>assets/images/<?php echo htmlspecialchars($award['imgUrl']); ?>" 
-                           data-fancybox="gallery" 
-                           data-caption="<?php echo htmlspecialchars($award['description']); ?>">
-                            <img src="<?= LINK; ?>assets/images/<?php echo htmlspecialchars($award['imgUrl']); ?>" 
-                                 alt="<?php echo htmlspecialchars($award['name']); ?>" 
-                                 class="fancybox award-image" />
-                        </a>
-                        <div class="awards-section-content">
-                            <div class="text-uppercase"><?php echo htmlspecialchars($award['name']); ?></div>
-                            <p class="text-uppercase text-secondary"><?php echo htmlspecialchars($award['description']); ?></p>
-                        </div>
-                    </div>
+            <!-- Display award thumbnails -->
+<?php if (!empty($awards)): ?>
+    <?php foreach ($awards as $award): ?>
+        <!-- <div class="col-12 col-sm-6 col-lg-4 mb-4"> -->
+        <div class="col-6 col-md-4 col-lg-3 mb-4"> 
+            <div class="h-100 gallery-item">
+                <?php 
+                // Create a slug from the award name
+                $awardSlug = createSlug($award['name']);
+                ?>
+                <a href="<?= LINK; ?>about/awards/<?php echo htmlspecialchars($awardSlug); ?>">
+                    <img loading="lazy" src="<?= LINK; ?>assets/images/<?php echo htmlspecialchars($award['thumbnail']); ?>" 
+                         alt="<?php echo htmlspecialchars($award['name']); ?>" 
+                         class="thumbnail-image" />
+                </a>
+                <div class="awards-section-content">
+                    <div class="text-uppercase"><?php echo htmlspecialchars($award['name']); ?></div>
+                    <div class="thumnail-description"><?php echo htmlspecialchars($award['thumbdes']); ?></div>
                 </div>
-
-                <!-- PDF Images as JPGs -->
-                <?php for ($i = 0; $i < 2; $i++): ?>
-                    <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                        <div class="h-100 gallery-item">
-                            <?php if (!empty($award['pdfImages'][$i])): ?>
-                                <a href="<?= LINK; ?>assets/images/<?php echo htmlspecialchars($award['pdfImages'][$i]['imgUrl']); ?>" 
-                                   data-fancybox="gallery" 
-                                   data-caption="<?php echo htmlspecialchars($award['pdfImages'][$i]['description']); ?>">
-                                    <img src="<?= LINK; ?>assets/images/<?php echo htmlspecialchars($award['pdfImages'][$i]['imgUrl']); ?>" 
-                                         alt="<?php echo htmlspecialchars($award['pdfImages'][$i]['description']); ?>" 
-                                         class="fancybox award-image" />
-                                </a>
-                                <div class="awards-section-content">
-                                    <p class="text-uppercase"><?php echo htmlspecialchars($award['pdfImages'][$i]['description']); ?></p>
-                                </div>
-                            <?php else: ?>
-                                <!-- Empty placeholder to maintain layout -->
-                                <div class="empty-placeholder"></div>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                <?php endfor; ?>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <p>No awards data available.</p>
-        <?php endif; ?>
+            </div>
+        </div>
+    <?php endforeach; ?>
+    <?php else: ?>
+        <p>No awards data available.</p>
+    <?php endif; ?>
     </div>
 </div>

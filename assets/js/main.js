@@ -1,4 +1,34 @@
 $(document).ready(function () {
+  const currentPath = window.location.pathname;
+
+  // Loop through all the anchor tags in the nav
+  // $(".nav-list a, .burger-list a, .category-list-item a").each(function () {
+  //   // Get the href of each link and remove the base URL from it
+  //   const linkPath = $(this).attr("href").replace(window.location.origin, "");
+
+  //   // If the href matches the current path, add the 'active' class
+  //   if (linkPath === currentPath) {
+  //     console.log(linkPath);
+  //     console.log(currentPath);
+  //     $(this).addClass("active");
+  //   }
+  // });
+  $(document).ready(function () {
+    // Get the current URL path
+    const currentPath = window.location.pathname;
+
+    // Loop through all anchor tags in the nav and category list
+    $(".nav-list a, .burger-list a, .category-list-item a").each(function () {
+      // Get the href of each link and remove the base URL from it
+      const linkPath = $(this).attr("href").replace(window.location.origin, "");
+
+      // If the href matches the current path, add the 'active' class
+      if (linkPath === currentPath) {
+        $(this).addClass("active"); // This adds the 'active' class to the matched link
+      }
+    });
+  });
+
   $(".owl-carousel").owlCarousel({
     loop: true,
     // items: 4,

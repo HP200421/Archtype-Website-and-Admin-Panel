@@ -72,7 +72,25 @@ include '../layout/head.php';
               <button type="submit" class="btn btn-dark">Send Message</button>
             </div>
           </form>
-          <!-- <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-zU0Out0PFFdN4wmO9h6I0vNg0Q&hl=en&ll=18.507456999999988%2C73.84169700000001&z=17"  style="width: 100%; height: 400px"  frameborder="0" allowfullscreen="" loading="lazy"></iframe> -->
+          <div class="address-map-container">
+          <div class="address">
+              <h5>Address</h5>
+              <p>
+                  10, Satsang Society, Near Vaikunth (Niwara),<br>
+                  Navi Peth, Off. L. B. Shastri Road,<br>
+                  Pune – 411030.<br>
+                  Tel: 020 2951 1177<br>
+                  Email: <a href="mailto:info@archtype.in">info@archtype.in</a>
+              </p>
+          </div>
+          <div class="map">
+              <h5>Location</h5>
+              <iframe 
+                  src="https://www.google.com/maps/d/u/0/embed?mid=1-zU0Out0PFFdN4wmO9h6I0vNg0Q&hl=en&ll=18.507456999999988%2C73.84169700000001&z=17"
+                  loading="lazy">
+              </iframe>
+          </div>
+        </div>
         </div>
     </div>
 </div>

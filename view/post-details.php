@@ -3,6 +3,7 @@ include '../config.php';
 include 'layout/head.php';
 
 // Function to fetch post by slug
+
 function getPostBySlug($conn, $slug) {
     $stmt = $conn->prepare("SELECT * FROM posts WHERE slug = ?");
     $stmt->bind_param("s", $slug);
@@ -45,7 +46,7 @@ $conn->close();
         </div>
  
         <div class="col-12 col-lg-9">
-            <!-- <h1><?php echo htmlspecialchars($post['post_name']); ?></h1> -->
+            <h5 class="post-details-title"><?php echo htmlspecialchars($post['post_name']); ?></h5>
             <div class="post-images">
                 <?php if (!empty($images)): ?>
                     <div class="row">

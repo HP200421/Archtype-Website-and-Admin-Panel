@@ -7,20 +7,20 @@ $offset = ($page - 1) * $limit;
     <div class="d-flex flex-row justify-content-between align-items-center mb-3">
         <div class="d-flex align-items-center">
             <form method="GET" action="<?= LINK; ?>post/index" class="d-flex align-items-center gap-2">
-                <input type="text" name="search" class="form-control" placeholder="Search events" value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>" style="max-height: 35px;">
+                <input type="text" name="search" class="form-control border border-primary" placeholder="Search events" value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>" style="max-height: 35px;">
                 <button type="submit" class="btn btn-outline-primary p-2" style="max-height: 35px;"><i class="icon-search"></i></button>
             </form>
         </div>
 
         <div class="d-flex align-items-center">
-            <select name="main_id" class="form-select ml-2" id="parentCategory" style="min-width: 250px; max-height: 40px;">
+            <select name="main_id" class="form-select ml-2 text-black border border-primary" id="parentCategory" style="min-width: 250px; max-height: 40px;">
                 <option value="">Select a category</option>
                 <!-- Options will be populated dynamically -->
             </select>
         </div>
 
         <div class="d-flex align-items-center">
-            <select name="sub_id" class="form-select ml-2" id="subCategory" style="min-width: 250px; max-height: 40px;">
+            <select name="sub_id" class="form-select ml-2 text-black border border-primary" id="subCategory" style="min-width: 250px; max-height: 40px;">
                 <option value="">Select a category</option>
                 <!-- Options will be populated dynamically -->
             </select>

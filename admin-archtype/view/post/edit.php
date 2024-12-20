@@ -54,7 +54,7 @@
             <div class="form-group row">
               <label class="col-sm-3 col-form-label" for="parentCategory">Main Category*</label>
               <div class="col-sm-9">
-                <select name="main_id" class="form-select" id="parentCategory" vali="yes" data-value="<?= $row['main_id']; ?>">
+                <select name="main_id" class="form-select text-dark" id="parentCategory" vali="yes" data-value="<?= $row['main_id']; ?>">
                   <option value="">Select a category</option>
                   <!-- Main category options will be populated -->
                 </select>
@@ -67,7 +67,7 @@
             <div class="form-group row">
               <label class="col-sm-3 col-form-label" for="subCategory">Sub Category*</label>
               <div class="col-sm-9">
-                <select name="sub_id" class="form-select" id="subCategory" vali="yes" data-value="<?= $row['sub_id']; ?>">
+                <select name="sub_id" class="form-select text-dark" id="subCategory" vali="yes" data-value="<?= $row['sub_id']; ?>">
                   <option value="">Select a subcategory</option>
                   <!-- Subcategory options will be populated based on the selected main category -->
                 </select>

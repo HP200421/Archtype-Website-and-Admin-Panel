@@ -2,10 +2,34 @@
 body {
   margin: 0;
   padding: 0;
+  /* background-color: rgb(200 193 193 / 71%); */
   /* font-family: "Times New Roman", Times, serif; */
   /* font-family: "Roboto"; */
   /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
+}
+
+/* Scrollbar for Webkit browsers */
+body::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+/* Scrollbar track */
+body::-webkit-scrollbar-track {
+  background-color: #f0f0f0 !important;
+  border-radius: 10px !important;
+}
+
+/* Scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+  background-color: darkgray !important;
+  border-radius: 10px !important;
+}
+
+/* Scrollbar thumb hover */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: gray !important;
 }
 
 .roboto-thin {
@@ -188,11 +212,28 @@ img {
   padding: 10px 10px;
 }
 
-.nav-list a:hover {
-  color: orange;
+.category-list-item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
 }
 
-.nav-list a:active {
+.hero-link a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 18px;
+}
+
+.category-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  color: black;
+}
+
+.hero-link a:hover {
   color: orange;
 }
 
@@ -223,11 +264,17 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 400px;
+  height: 600px;
   z-index: -1;
+  /* height: auto;
+  z-index: -1;
+  background-color: rgb(200 193 193 / 71%); */
   /* According to SCDA website */
-  background: linear-gradient(to bottom, rgb(240 239 236), #ffffff);
+  /* z-index: -1; */
+  /* background: linear-gradient(to bottom, rgb(240 239 236), #ffffff); */
+  /* background: linear-gradient(to bottom, rgb(205 205 205), #ffffff); */
   /* background: linear-gradient(to bottom, #fff3cd40, #ffffff); */
+  background: linear-gradient(to bottom, #d6d2c4, #ffffff);
 }
 
 .custom-position {
@@ -273,11 +320,25 @@ img {
   filter: grayscale(0%);
 }
 
+.subcategory-image {
+  width: 215px;
+  height: 105px;
+  background-size: contain;
+  max-width: 112%;
+  transition: filter 1s ease;
+}
+
 /* .post-image {
   width: 700px;
   height: 350px;
   object-fit: cover;
 } */
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
 
 .post-image {
   width: 700px;
@@ -287,6 +348,7 @@ img {
 
 .post-title {
   font-size: 12px;
+  padding-left: 0px;
   text-transform: uppercase;
 }
 
@@ -295,16 +357,17 @@ img {
 }
 
 .custom-burger {
+  margin-top: -5px;
   margin-bottom: 60px;
 }
 
-.gallery-item {
+/* .gallery-item {
   transition: 0.5s ease-in-out;
 }
 
 .gallery-item:hover {
   filter: brightness(70%);
-}
+} */
 
 .post-details {
   text-transform: capitalize;
@@ -366,6 +429,12 @@ img {
   font-size: 12px;
   text-align: center;
 }
+.awards-section-content div:nth-of-type(2) {
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .contact-form {
   background-color: rgba(255, 255, 255, 0.9);
@@ -373,15 +442,96 @@ img {
   border-radius: 10px;
   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
 }
+.address-map-container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  justify-content: space-between;
+  gap: 15px; /* Optional: Adds spacing between the address and map sections */
+}
+
+.address-map-container .address,
+.address-map-container .map {
+  flex: 1; /* Ensures both columns take up equal space */
+  max-width: 50%; /* Prevents columns from being too wide */
+}
+
+.address p {
+  font-size: 14px;
+}
+
+iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+}
+
+a.active {
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+}
+
+.team-section {
+  margin-top: 30px;
+}
+
+.team-section .team-member img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  border-radius: 10px;
+}
+
+.team-section h4 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.post-details-title {
+  display: none;
+}
+
+.fixed-arch-div {
+  /* bottom: 100px; */
+  /* To keep in top center of the page */
+  /* bottom: 50%; */
+  bottom: 8%;
+  width: 100%;
+  z-index: 5;
+  padding: 5px 8px;
+  transition: all 0.3s ease;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.designation {
+  margin-top: -5px !important;
+}
 
 /* Media queries for responsive design and add custom classes */
 @media (max-width: 768px) {
+  .fixed-arch-div {
+    bottom: 14%;
+    /* top: -12%; */
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
   .custom-position {
     position: relative;
   }
 
   .bread {
     margin: 20px 0px 0px 0px;
+    display: none;
   }
 
   .nav-list {
@@ -412,6 +562,11 @@ img {
     display: flex;
     flex-direction: row;
     gap: 8px;
+    display: none;
+  }
+
+  .categoryListVisible li {
+    display: none;
   }
 
   .post-image {
@@ -420,12 +575,24 @@ img {
     object-fit: cover;
   }
 
+  .post-title {
+    text-align: center;
+  }
+
+  .post-location {
+    text-align: center;
+  }
+
   .post-details {
     width: 100%;
     margin-bottom: 4em;
   }
 
   .thumbnail-image {
+    margin-left: -10px;
+  }
+
+  .subcategory-image {
     margin-left: -10px;
   }
 
@@ -441,28 +608,26 @@ img {
 
   .custom-margin {
     margin-left: 0px;
+    margin-top: 16px;
+  }
+
+  .address-map-container {
+    flex-direction: column;
+  }
+  .address-map-container .address,
+  .address-map-container .map {
+    max-width: 100%;
+  }
+
+  .map {
+    margin-bottom: 30px;
+  }
+
+  .post-details-title {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0px 10px 0px;
   }
 }
-
-/* Just practicing text gradient */
-/* h1 {
-  font-size: 72px;
-  background: -webkit-linear-gradient(#f90505, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-/* .award-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.awards-section-content {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.gallery-item {
-  text-align: center;
-} */

@@ -12,7 +12,7 @@ $(document).ready(function () {
         const res = JSON.parse(response);
 
         if (res.success) {
-          window.location.href = LINK + "mainCategory";
+          window.location.href = LINK + "subCategory";
         } else {
           // console.log("Error: ", res.message);
           alert(res.message);

@@ -1,33 +1,9 @@
 [
   {
-    "name": "Babylon",
-    "description": "Awarded for Aesa in 2011",
-    "imgUrl": "Babylon.jpg",
-    "pdfImages": [
-      {
-        "imgUrl": "Aesa_2011.jpg",
-        "description": "Aesa 2011 Certificate for Babylon"
-      }
-    ]
-  },
-  {
-    "name": "Sky Vie",
-    "description": "Awarded for Asia Pacific in 2012",
-    "imgUrl": "Sky_View.jpg",
-    "pdfImages": [
-      {
-        "imgUrl": "Bai_2012.jpg",
-        "description": "ASIA PACIFIC 2012 - SKY VIE"
-      },
-      {
-        "imgUrl": "Bai_2011.jpg",
-        "description": "Bai 2011 Certificate for Sky Vie"
-      }
-    ]
-  },
-  {
-    "name": "Heritage Wing At Ramsukh Mahabaleshwar",
-    "description": "Awarded for Aesa in 2015",
+    "name": "Heritage Wing",
+    "thumbdes": "Ramsukh resorts",
+    "description": "Heritage wing, Ramsukh resorts Mahabaleshwar",
+    "thumbnail": "Heritage_Wing.jpg",
     "imgUrl": "Heritage_Wing.jpg",
     "pdfImages": [
       {
@@ -37,30 +13,23 @@
     ]
   },
   {
-    "name": "Reya",
-    "description": "Awarded for Aesa in 2015",
-    "imgUrl": "Reya.jpg",
+    "name": "Sky Vie",
+    "thumbdes": "Sky Vie Asia Pacific Projects",
+    "description": "Sky vie, Asia pacific 50 best projects 2012",
+    "thumbnail": "Sky_View.jpg",
+    "imgUrl": "Sky_View.jpg",
     "pdfImages": [
       {
-        "imgUrl": "Aesa_2015_Reya.jpg",
-        "description": "Aesa 2015 Certificate for Reya"
+        "imgUrl": "Bai_2012.jpg",
+        "description": "ASIA PACIFIC 2012 - SKY VIE"
       }
     ]
   },
   {
-    "name": "Ramsukh House",
-    "description": "Awarded for Aesa in 2016",
-    "imgUrl": "Ramsukh_House.jpg",
-    "pdfImages": [
-      {
-        "imgUrl": "Aesa_2016.jpg",
-        "description": "Aesa 2016 Certificate for Ramsukh House"
-      }
-    ]
-  },
-  {
-    "name": "Abhimannshree House",
-    "description": "Awarded for Aesa in 2024",
+    "name": "A6 Abhimanshree",
+    "thumbdes": "A6 Abhimanshree",
+    "description": "A6 Abhimanshree, Aesa award 2024",
+    "thumbnail": "Abhimannshree.jpg",
     "imgUrl": "Abhimannshree.jpg",
     "pdfImages": [
       {
@@ -70,13 +39,67 @@
     ]
   },
   {
-    "name": "MVPM Hostel",
-    "description": "Awarded for Aesa in 2024",
+    "name": "Ramsukh House",
+    "thumbdes": "Ramsukh House",
+    "description": "Ramsukh house, Aesa award 2016",
+    "thumbnail": "Ramsukh_House.jpg",
+    "imgUrl": "Ramsukh_House.jpg",
+    "pdfImages": [
+      {
+        "imgUrl": "Aesa_2016.jpg",
+        "description": "Aesa 2016 Certificate for Ramsukh House"
+      }
+    ]
+  },
+  {
+    "name": "Reya",
+    "thumbdes": "Reya",
+    "description": "Reya, Aesa award 2015",
+    "thumbnail": "Reya.jpg",
+    "imgUrl": "Reya.jpg",
+    "pdfImages": [
+      {
+        "imgUrl": "Aesa_2015_Reya.jpg",
+        "description": "Aesa 2015 Certificate for Reya"
+      }
+    ]
+  },
+  {
+    "name": "Lunkad Sky Vie",
+    "thumbdes": "Sky Vie Asia Pacific Projects",
+    "description": "Lunkad sky vie, Bai Award 2011",
+    "thumbnail": "Sky_View.jpg",
+    "imgUrl": "Sky_View.jpg",
+    "pdfImages": [
+      {
+        "imgUrl": "Bai_2011.jpg",
+        "description": "Bai 2011 Certificate for Sky Vie"
+      }
+    ]
+  },
+  {
+    "name": "V N Lahoti Hostel",
+    "thumbdes": "V N lahoti hostel",
+    "description": "V N lahoti hostel, AESA award for institutional catagory 2024",
+    "thumbnail": "Mvpm_Hostel.jpg",
     "imgUrl": "Mvpm_Hostel.jpg",
     "pdfImages": [
       {
         "imgUrl": "Aesa_2024_Hostel.jpg",
         "description": "Aesa 2024 Certificate for MVPM Hostel"
+      }
+    ]
+  },
+  {
+    "name": "Babylon",
+    "thumbdes": "Babylon",
+    "description": "Babylon, AESA award for residential building",
+    "thumbnail": "Babylon.jpg",
+    "imgUrl": "Babylon.jpg",
+    "pdfImages": [
+      {
+        "imgUrl": "Aesa_2011.jpg",
+        "description": "Aesa 2011 Certificate for Babylon"
       }
     ]
   }

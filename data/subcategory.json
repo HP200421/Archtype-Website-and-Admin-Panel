@@ -1,0 +1,10 @@
+{
+  "apartment-projects": ["apartment_project.jpg"],
+  "bungalows-and-villas": ["bungalow_villa.jpg"],
+  "commercial-projects": ["commercial_project.jpg"],
+  "conservation": ["conservation_project.jpg"],
+  "hospitality-projects": ["hospitality_project.jpg"],
+  "apartment-interiors": ["apartment_interior.jpg"],
+  "commercial-interiors": ["commercial_interior.jpg"],
+  "hospitality-interiors": ["hospitality_interior.jpg"]
+}
