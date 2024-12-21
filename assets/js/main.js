@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  const currentPath = window.location.pathname;
-
   // Loop through all the anchor tags in the nav
   // $(".nav-list a, .burger-list a, .category-list-item a").each(function () {
   //   // Get the href of each link and remove the base URL from it
@@ -13,10 +11,11 @@ $(document).ready(function () {
   //     $(this).addClass("active");
   //   }
   // });
+  // See for the servers the link path is different like starts with this  http://www.archtype.in
   $(document).ready(function () {
     // Get the current URL path
     const currentPath = window.location.pathname;
-
+    currentPath = " https://www.archtype.in" + currentPath;
     // Loop through all anchor tags in the nav and category list
     $(".nav-list a, .burger-list a, .category-list-item a").each(function () {
       // Get the href of each link and remove the base URL from it
