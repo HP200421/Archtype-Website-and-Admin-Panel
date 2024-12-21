@@ -19,8 +19,8 @@ include '../layout/head.php';
             </ul>
         </div>
         
-        <div class="col-12 col-lg-9 custom-margin">
-          <form id="contact-form" action="" method="post" class="mb-4 contact-form">
+        <div class="col-12 col-lg-9 custom-margin d-flex flex-column">
+          <form id="contact-form" action="" method="post" class="mb-lg-4 contact-form order-2 order-lg-1">
             <div class="row mb-3">
               <div class="col-md-6">
                 <label for="name" class="form-label font-weight-bold">Name*</label>
@@ -63,7 +63,7 @@ include '../layout/head.php';
               name="message"
               id="message"
               placeholder="Enter your message......."
-              rows="5"
+              rows="2"
               required
               ></textarea>
             </div>
@@ -72,25 +72,25 @@ include '../layout/head.php';
               <button type="submit" class="btn btn-dark">Send Message</button>
             </div>
           </form>
-          <div class="address-map-container">
-          <div class="address">
-              <h5>Address</h5>
-              <p>
-                  10, Satsang Society, Near Vaikunth (Niwara),<br>
-                  Navi Peth, Off. L. B. Shastri Road,<br>
-                  Pune – 411030.<br>
-                  Tel: 020 2951 1177<br>
-                  Email: <a href="mailto:info@archtype.in">info@archtype.in</a>
-              </p>
+          <div class="address-map-container order-1 order-lg-2">
+            <div class="address">
+                <h5>Address</h5>
+                <p>
+                    10, Satsang Society, Near Vaikunth (Niwara),<br>
+                    Navi Peth, Off. L. B. Shastri Road,<br>
+                    Pune – 411030.<br>
+                    Tel: 020 2951 1177<br>
+                    Email: <a href="mailto:info@archtype.in">info@archtype.in</a>
+                </p>
+            </div>
+            <div class="map">
+                <h5>Location</h5>
+                <iframe 
+                    src="https://www.google.com/maps/d/u/0/embed?mid=1-zU0Out0PFFdN4wmO9h6I0vNg0Q&hl=en&ll=18.507456999999988%2C73.84169700000001&z=17"
+                    loading="lazy">
+                </iframe>
+            </div>
           </div>
-          <div class="map">
-              <h5>Location</h5>
-              <iframe 
-                  src="https://www.google.com/maps/d/u/0/embed?mid=1-zU0Out0PFFdN4wmO9h6I0vNg0Q&hl=en&ll=18.507456999999988%2C73.84169700000001&z=17"
-                  loading="lazy">
-              </iframe>
-          </div>
-        </div>
         </div>
     </div>
 </div>

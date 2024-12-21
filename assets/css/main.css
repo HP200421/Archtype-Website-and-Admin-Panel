@@ -630,4 +630,8 @@ a:hover {
     text-transform: uppercase;
     margin: 10px 0px 10px 0px;
   }
+
+  .contact-form {
+    margin-bottom: 65px !important;
+  }
 }

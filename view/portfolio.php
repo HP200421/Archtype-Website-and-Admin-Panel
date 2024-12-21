@@ -119,7 +119,7 @@ $conn->close();
                     <div class="row">
                         <?php foreach ($posts as $post): ?>
                             <div class="col-6 col-md-4 col-lg-3 mb-5"> 
-                                <div class="post">
+                                <div class="post text-center">
                                     <?php
                                         $image = json_decode($post['thumbnail_image'], true);
                                         if (is_array($image) && !empty($image)):
@@ -128,7 +128,7 @@ $conn->close();
                                         <a href="<?= LINK; ?>portfolio/<?php echo htmlspecialchars($categorySlug); ?>/<?php echo htmlspecialchars($post['subcategory_slug'] ?? 'all'); ?>/<?php echo htmlspecialchars($post['slug']); ?>" class="post-link">
                                             <img loading="lazy" src="<?php echo htmlspecialchars(LINK . 'uploads/' . $firstImage); ?>"  class="subcategory-image" />
                                         </a>
-                                        <div class="post-title"><?php echo htmlspecialchars($post['post_name']); ?></div>
+                                        <div class="post-title mt-2"><?php echo htmlspecialchars($post['post_name']); ?></div>
                                         <div class="post-location"><?php echo htmlspecialchars($post['location']); ?></div>
                                     <?php else: ?>
                                         <p>No images available.</p>
